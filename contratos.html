@@ -30,15 +30,13 @@
                        <router-link to="/" class="nav-link active" aria-current="page">Invoice</router-link>
                     </li>
                     <li class="nav-item">          
-                      <a class = "nav-link" href="./contratos.html">Contratos</a>          
+                      <router-link to="./contratos" class="nav-link">Contratos</router-link>           
                     </li>
                      <li class="nav-item">                
                        <router-link to="/Cotizaciones" class="nav-link">Cotizaciones</router-link>
-                       <a class = "nav-link" href="./cotizacion">Cotizaciones</a>
                     </li>
                     <li class="nav-item">                
                         <router-link to="/Cotizaciones" class="nav-link">Cotizaciones</router-link>
-                        <a class = "nav-link" href="./contratos.html">Contratos</a>
                      </li>
                           
                   </ul>
@@ -61,14 +59,14 @@
                              `
                     };
                 const Contratos = {
-                    template:`<div class="contratos contenedor">
+                    template:`<div class="Contratos contenedor">
                                 <h1 class="animate__animated animate__backInDown">Contratos</h1>                    
                               </div>
                               `
                     };
                 const Cotizaciones = {
                     template:`<div class="Cotizaciones contenedor">
-                                <h1 class="animate__animated animate__slideInRight">Cotizacioens</h1>
+                                <h1 class="animate__animated animate__slideInRight">Cotizaciones</h1>
                                 </div>
                              `
                     };
@@ -101,7 +99,7 @@
                 <div id="invoice-app">
                     <div class="header">
                         <div>
-                            <h1>Invoice Builder</h1>
+                            <h1>Contratos Builder</h1>
                             <p>Date:  <input type="date" v-model="invoiceDate"></p>
                         </div>
                         <div>
