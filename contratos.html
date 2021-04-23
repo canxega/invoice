@@ -25,22 +25,23 @@
                   <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                  <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item">      
-                       <router-link to="/" class="nav-link active" aria-current="page">Invoice</router-link>
-                    </li>
-                    <li class="nav-item">          
-                      <router-link to="./contratos" class="nav-link">Contratos</router-link>           
-                    </li>
-                     <li class="nav-item">                
-                       <router-link to="/Cotizaciones" class="nav-link">Cotizaciones</router-link>
-                    </li>
-                    <li class="nav-item">                
-                        <router-link to="/Cotizaciones" class="nav-link">Cotizaciones</router-link>
-                     </li>
-                          
-                  </ul>
-                  </div>
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                      <li class="nav-item">      
+                          <a class = "nav-link" href="./index.html">Invoice</a>
+                      </li>
+                      <li class="nav-item">          
+                        <a class = "nav-link" href="./contratos.html">Contratos</a>          
+                      </li>
+                       <li class="nav-item">                
+                         <a class = "nav-link" href="./cotizaciones.html">Cotizaciones</a>
+                      </li>
+                      <li class="nav-item">                
+                          <router-link to="/Cotizaciones" class="nav-link">Cotizaciones</router-link>
+                          <a class = "nav-link" href="./contratos.html">Contratos</a>
+                       </li>
+                            
+                    </ul>
+                    </div>
               </div>
             </nav>
             <router-view></router-view>
@@ -54,7 +55,7 @@
                 //1 - Definimos los componentes de ruta
                 const Invoice = {
                     template:`<div class="invoice contenedor">
-                                <h1 class="animate__animated animate__bounce">Invoice</h1>
+                                <h1 class="animate__animated animate__bounce">Contratos</h1>
                               </div>
                              `
                     };
