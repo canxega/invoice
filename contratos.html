@@ -1,6 +1,6 @@
 <html>
     <head>
-        <link rel="stylesheet" href="styles/diseño.css">
+        <link rel="stylesheet" href="./styles/diseño.css">
         <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
         <!-- Animate CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
@@ -16,7 +16,7 @@
                 <!-- Icono de NAVBAR -->
                 <nav class="navbar navbar-dark">
                 <div class="container-fluid">
-                    <a class="navbar-brand" href="#">
+                    <a class="navbar-brand" href="">
                     <img src="https://getbootstrap.com/docs/5.0/assets/brand/bootstrap-logo.svg" alt="" width="30" height="24" class="d-inline-block align-top">        
                     </a>
                 </div>
@@ -51,32 +51,7 @@
             <script src="https://unpkg.com/vue"></script>
             <script src="https://unpkg.com/vue-router@3.4.9/dist/vue-router.js"></script>
             <script>
-                //1 - Definimos los componentes de ruta
-                const Invoice = {
-                    template:`<div class="invoice contenedor">
-                                <h1 class="animate__animated animate__bounce">Contratos</h1>
-                              </div>
-                             `
-                    };
-                const Contratos = {
-                    template:`<div class="Contratos contenedor">
-                                <h1 class="animate__animated animate__backInDown">Contratos</h1>                    
-                              </div>
-                              `
-                    };
-                const Cotizaciones = {
-                    template:`<div class="Cotizaciones contenedor">
-                                <h1 class="animate__animated animate__slideInRight">Cotizaciones</h1>
-                                </div>
-                             `
-                    };
-            
-                //2 - Definimos el arreglo de rutas
-                const routes = [
-                    {path:'/', component: Invoice},
-                    {path:'/contratos', component: Contratos},
-                    {path:'/cotizaciones', component: Cotizaciones}
-                ]
+                
             
                 //3 - Creamos una instancia de vuerouter y como parametro pasamos un objeto que contiene las rutas definidad en el punto 2
                 const router = new VueRouter({routes})
