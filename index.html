@@ -9,6 +9,7 @@
     </head>
     <body>
         
+        
         <div id="app">
 
             <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -26,8 +27,8 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                   <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item">      
-                        <a class = "nav-link" href="./index.html">Invoice</a>
+                    <li class="nav-item">  
+                      <a class = "nav-link" href="./index.html">Invoice</a>
                     </li>
                     <li class="nav-item">          
                       <a class = "nav-link" href="./contratos.html">Contratos</a>          
@@ -53,6 +54,32 @@
             <script src="https://unpkg.com/vue-router@3.4.9/dist/vue-router.js"></script>
             <script>
                 //1 - Definimos los componentes de ruta
+    const Invoice = {
+        template:`<div class="invoice contenedor">
+                    <h1 class="animate__animated animate__bounce">Invoice</h1>
+                  </div>
+                 `
+        };
+    const Contratos = {
+        template:`<div class="contratos contenedor">
+                    <h1 class="animate__animated animate__backInDown">Contratos</h1>                    
+                  </div>
+                  `
+        };
+    const Cotizaciones = {
+        template:`<div class="cotizaciones contenedor">
+                    <h1 class="animate__animated animate__slideInRight">Cotizaciones</h1>
+                    </div>
+                 `
+        };
+
+    //2 - Definimos el arreglo de rutas
+    const routes = [
+        {path:'/', component: Invoice},
+        {path:'/contratos', component: Contratos},
+        {path:'/cotizaciones', component: Cotizaciones}
+    ]
+
                
                            
                 //3 - Creamos una instancia de vuerouter y como parametro pasamos un objeto que contiene las rutas definidad en el punto 2
@@ -61,7 +88,7 @@
                 //4 - Creamos una instanacia de Vue y montamos la el ambito (#app)
                 new Vue({
                     router
-                }).$mount('app')
+                }).$mount('#app')
             
             </script>
             
