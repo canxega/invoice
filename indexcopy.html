@@ -97,13 +97,13 @@
         
         
         
-        <!-- empieza la factura -->
-        <div class="page-container">
+         <!-- empieza la factura -->
+         <div class="page-container">
             <main class="main-content">
                 <div id="invoice-app">
                     <div class="header">
                         <div>
-                            <h1>Invoice Builder</h1>
+                            <h1>Cotizaciones Builder</h1>
                             <p>Date:  <input type="date" v-model="invoiceDate"></p>
                         </div>
                         <div>
@@ -130,12 +130,6 @@
                                 <th>Item</th>
                                 <th>Price/unite</th>
                                 <th>Quantity</th>
-                                <th>Tax</th>
-                                <th>RCV</th>
-                                <th>age/life</th>
-                                <th>COND.</th>
-                                <th>DEP%</th>
-                                <th>Deprec</th>
                                 <th>Total</th>
                                 <th></th>
                             </tr>
@@ -145,12 +139,6 @@
                             <td data-label="Item"><input type="text" v-model="item.description" /></td>
                             <td data-label="Price/unite"><div class="cell-with-input">{{ invoiceCurrency.symbol }} <input type="number" min="0" v-model="item.price" /></div></td>
                             <td data-label="Quantity"><input type="number" min="0" v-model="item.quantity" /></td>
-                            <td data-label="Tax"><div class="cell-with-input">%<input type="number" min="0" v-model="item.Tax" /></div></td>
-                            <td data-label="RCV"><div class="cell-with-input">{{ invoiceCurrency.symbol }} <input type="number" min="0" v-model="item.RCV" /></div></td>
-                            <td data-label="age/life"><input type="text" v-model="item.age" /></td>
-                            <td data-label="COND"><input type="text" v-model="item.COND" /></td>
-                            <td data-label="DEP"><div class="cell-with-input">%<input type="number" min="0" v-model="item.DEP" /></div></td>
-                            <td data-label="Deprec"><input type="number" min="0" v-model="item.Deprec" /></td>
                             <td data-label="Total">{{ decimalDigits(item.price * item.quantity) }}</td>
                             <td class="text-right"><button class="is-danger" v-on:click="deleteItem(index)">Delete item</button></td>
                         </tr>
